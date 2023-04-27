@@ -25,9 +25,9 @@ jobs:
           context: .
           push: true
           dockerfile: Dockerfile
-          tags: 
-            -${{ secrets.DOCKERHUB_USERNAME }}/cicd_automated:${{ github.sha }}
-            -${{ secrets.DOCKERHUB_USERNAME }}/cicd_automated:latest
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/cicd_automated:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/cicd_automated:latest
 
       - name: RunTests
         run: go test -v ./...
