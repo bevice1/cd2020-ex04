@@ -37,6 +37,6 @@ jobs:
         with:
           image-ref: bevice1/cicd_automated:latest
           format: table
-          vuln-type: all
+          vuln-type: 'os,library'
           exit-code: "1"
 
